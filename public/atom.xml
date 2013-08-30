@@ -4,7 +4,7 @@
   <title><![CDATA[NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2013-08-29T18:14:15-07:00</updated>
+  <updated>2013-08-29T22:38:27-07:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -12,5 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[About OAuth]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2013/08/29/about-oauth/"/>
+    <updated>2013-08-29T21:35:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2013/08/29/about-oauth</id>
+    <content type="html"><![CDATA[<p>OAuth is an open standard for authentication. It can be used in two different ways.</p>
+
+<h4>Mode 1 &ndash; Third party authentication</h4>
+
+<p>This is the mode primarily talked about on the internet. The idea is that you authorize one site to get limited data from another site using the OAuth API. For example, a site lets you login with your Facebook or Google credentials instead of setting up an account with them, or a Twitter phone app can get and send tweets from your account.</p>
+
+<p><img src="images/sign_in_w_google.png" title="Sign in screenshot" alt="sign in with google" /></p>
+
+<p>The API Producer (Facebook, etc.) is responsible for validating the user&rsquo;s credentials internally and then giving the Consumer site a special token that the Producer will treat as an authenticated user with limited access. Each Producer specifies what is available via their OAuth API, so it can be as little as email address, or as much as everything about a user on the site. The Producer can also make the authorization tokens expire after a set period of time for additional security.
+The benefit of using OAuth for authentication depends on what the Consumer site needs. At the most basic level, the Consumer site can use another site&rsquo;s user system instead of maintaining a separate one. This is convenient for the user, who does not have to have additional usernames/passwords, and puts the onus of storing the passwords securely on the other site. If the Consumer site wants to interact with the Producer, then the API gives a clear set of available interactions and enforces that the user permitted the Consumer site to perform such actions. So OAuth lets two sites share private data once the user has granted permission for this sharing.</p>
+
+<h4>Mode 2 &ndash; Browser pass through</h4>
+
+<p>This mode requires that you have control of both the Producer and Consumer sites/servers. It is for when you have two servers that need to talk to each other, but they are not within the same firewall, so they cannot communicate directly. You can use OAuth signatures and the browser to proxy pass the communication.
+For example, say that a site has several ebooks that in turn have photos within them. These photos are stored on a separate server than the ebooks and they are authentication controlled. When a browser (aka user) asks for an ebook, the ebook Consumer wants to be able to send the browser working links to the photos so everything looks good in the browser. Since the Consumer knows an authentication token for the Producer, it signs (part of the OAuth protocol) the url and the Producer will then load the links when the browser goes to load the ebook.
+This is valuable because it keeps the Producer&rsquo;s data private except when the authorized site asks for it. It is a preset version of mode 1 enabling the servers to act on the behalf of a possibly anonymous user. In addition, if expiration times are added to the Producer&rsquo;s OAuth filtering, then even the permitted user will have limited access to the data.</p>
+
+<h4>Mode 3(ish) &ndash; Hybrid</h4>
+
+<p>Some sites let you set a single &ldquo;admin&rdquo; OAuth token that can then be used to perform the API calls with specific user information contained within the POST command as needed.</p>
+
+<p>Of note, OAuth has two different versions, 1.0 and 2.0. They are not compatible and have very different intentions. This is relevant, because many people argue that the new version is less secure than 1.0 and should not be used. For an explanation from a creator of OAuth 1.0 on the issues with 2.0 see: <a href="http://hueniverse.com/2012/07/oauth-2-0-and-the-road-to-hell/">http://hueniverse.com/2012/07/oauth-2-0-and-the-road-to-hell/</a></p>
+]]></content>
+  </entry>
   
 </feed>
