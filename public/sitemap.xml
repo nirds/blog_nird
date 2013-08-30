@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://nird-blog.herokuapp.com//about/</loc>
+        <lastmod>2013-08-29T18:04:28-07:00</lastmod>
+    </url>
+    <url>
         <loc>http://nird-blog.herokuapp.com//archives/</loc>
         <lastmod>2013-08-29T17:44:42-07:00</lastmod>
     </url>
