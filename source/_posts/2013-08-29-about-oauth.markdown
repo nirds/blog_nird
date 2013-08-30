@@ -3,7 +3,7 @@ layout: post
 title: "About OAuth"
 date: 2013-08-29 21:35
 comments: true
-categories: 
+categories: Overview
 author: Megan Kiest-McFarland
 ---
 
@@ -11,8 +11,8 @@ OAuth is an open standard for authentication. It can be used in two different wa
 
 ####Mode 1 - Third party authentication
 This is the mode primarily talked about on the internet. The idea is that you authorize one site to get limited data from another site using the OAuth API. For example, a site lets you login with your Facebook or Google credentials instead of setting up an account with them, or a Twitter phone app can get and send tweets from your account. 
-
-![sign in with google](images/sign_in_w_google.png "Sign in screenshot")
+<!-- more -->
+{% img center images/signin.png 250 150 Example sign in %}
 
 The API Producer (Facebook, etc.) is responsible for validating the user's credentials internally and then giving the Consumer site a special token that the Producer will treat as an authenticated user with limited access. Each Producer specifies what is available via their OAuth API, so it can be as little as email address, or as much as everything about a user on the site. The Producer can also make the authorization tokens expire after a set period of time for additional security. 
 The benefit of using OAuth for authentication depends on what the Consumer site needs. At the most basic level, the Consumer site can use another site's user system instead of maintaining a separate one. This is convenient for the user, who does not have to have additional usernames/passwords, and puts the onus of storing the passwords securely on the other site. If the Consumer site wants to interact with the Producer, then the API gives a clear set of available interactions and enforces that the user permitted the Consumer site to perform such actions. So OAuth lets two sites share private data once the user has granted permission for this sharing.
