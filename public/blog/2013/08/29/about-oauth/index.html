@@ -17,6 +17,7 @@
 	<link rel="canonical" href="">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -103,7 +104,7 @@ $(document).ready(
 <!-- more -->
 
 
-<p><img class="center" src="images/signin.png" width="250" height="150" title="Example sign in" ></p>
+<p><img class="center" src="/images/signin.png" width="250" height="150" title="Example sign in" ></p>
 
 <p>The API Producer (Facebook, etc.) is responsible for validating the user&rsquo;s credentials internally and then giving the Consumer site a special token that the Producer will treat as an authenticated user with limited access. Each Producer specifies what is available via their OAuth API, so it can be as little as email address, or as much as everything about a user on the site. The Producer can also make the authorization tokens expire after a set period of time for additional security.
 The benefit of using OAuth for authentication depends on what the Consumer site needs. At the most basic level, the Consumer site can use another site&rsquo;s user system instead of maintaining a separate one. This is convenient for the user, who does not have to have additional usernames/passwords, and puts the onus of storing the passwords securely on the other site. If the Consumer site wants to interact with the Producer, then the API gives a clear set of available interactions and enforces that the user permitted the Consumer site to perform such actions. So OAuth lets two sites share private data once the user has granted permission for this sharing.</p>
@@ -135,9 +136,10 @@ This is valuable because it keeps the Producer&rsquo;s data private except when 
   
 
 
-<time datetime="2013-08-29T21:35:00-07:00" pubdate data-updated="true">Aug 29<span>th</span>, 2013</time></div>
+<i class="icon-calendar-empty"></i>&nbsp;<time datetime="2013-08-29T21:35:00-07:00" pubdate data-updated="true">Aug 29<span>th</span>, 2013</time></div>
 	<div class="tags">
 
+<i class="icon-tags"></i>&nbsp;
 
 	<a class='category' href='/blog/categories/overview/'>Overview</a>
 
@@ -146,7 +148,7 @@ This is valuable because it keeps the Producer&rsquo;s data private except when 
 	<div class="author">
   
 
-<span class="byline author vcard">Posted by <span class="fn">Megan Kiest-McFarland</span></span>
+<i class="icon-star-empty"></i>&nbsp;<span class="byline author vcard">Posted by <span class="fn">Megan Kiest-McFarland</span></span>
 </div>
 	
 </div></article>
@@ -154,8 +156,6 @@ This is valuable because it keeps the Producer&rsquo;s data private except when 
 	<div class="share">
 	<div class="addthis_toolbox addthis_default_style ">
 	
-	
-	<a class="addthis_button_tweet"></a>
 	
 	
 <!---	<a class="addthis_counter addthis_pill_style"></a> --->
@@ -165,10 +165,10 @@ This is valuable because it keeps the Producer&rsquo;s data private except when 
 
 
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
+	<footer id="footer" class="inner">Copyright &copy; 2013<a href="http://nird.us/">
 
     NIRD, LLC
-
+</a>
 <br>
 Powered by Octopress.
 </footer>

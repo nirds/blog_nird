@@ -53,9 +53,10 @@
 				margin-right: 30px;
 			}
 		}
-		.date:before{content: "\f073";}
-		.tags:before{content: "\f02c";}
-		.comments:before{content: "\f075";}
-		.author:before{content: "\f004";}
+		/* add font awesome hexes here if you'd like icons to show up, like "\f006"*/
+		.date:before{content: none;}
+		.tags:before{content: none;}
+		.comments:before{content: none;}
+		.author:before{content: none;}
 	}
 }
