@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NIRDcast | NIRD Blog]]></title>
+  <link href="http://nird-blog.herokuapp.com//blog/categories/nirdcast/atom.xml" rel="self"/>
+  <link href="http://nird-blog.herokuapp.com//"/>
+  <updated>2013-09-05T07:32:55-07:00</updated>
+  <id>http://nird-blog.herokuapp.com//</id>
+  <author>
+    <name><![CDATA[NIRD, LLC]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NIRDcast: Intro to Git]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2013/09/04/nirdcast-intro-to-git/"/>
+    <updated>2013-09-04T23:48:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2013/09/04/nirdcast-intro-to-git</id>
+    <content type="html"><![CDATA[<p><video width='640' height='320' preload='none' controls poster='/images/intro_to_git.png'>
+<source src='http://nird-blog.herokuapp.com//videos/intro_to_git.mp4' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/>
+<source src='http://nird-blog.herokuapp.com//videos/intro_to_git.ogv' "type='video/ogg; codecs=theora, vorbis'"/>
+</video></p>
+]]></content>
+  </entry>
+  
+</feed>
