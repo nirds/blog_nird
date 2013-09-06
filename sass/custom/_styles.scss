@@ -2,6 +2,6 @@
 // Add styles here to make changes without digging in too much
 @import "footnote";
 
-.post .meta .author{padding-left:30px; position:relative;}
+.post .meta {padding-left:30px;}
 
-.byline {padding-left: 0px;}
+.author, .date, .tags {padding-left: 0px !important;} 
