@@ -4,4 +4,10 @@
 
 .post .meta {padding-left:30px;}
 
-.author, .date, .tags {padding-left: 0px !important;} 
+.author, .date, .tags {padding-left: 0px !important;}
+
+#header {background: #fff url('/images/nirdlogo.png') no-repeat right top;
+background-size: 10%; padding: 10px 0 !important; margin-top: 10px; height: 50px !important;}
+
+#header h1 {
+margin-top: 10px; }
