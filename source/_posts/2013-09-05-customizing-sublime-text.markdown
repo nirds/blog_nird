@@ -74,13 +74,13 @@ Open SublimeText2 -> Preferences -> [Defaut or User]
 Some popular preferences to add or change are: 
 
   - "save_on_focus_lost": true
-  Automatically saves the file you're editing when you leave it.
+    - Automatically saves the file you're editing when you leave it.
   - "wordWrap": true
-  Word wrap set to always be on. **
+    - Word wrap set to always be on. 
   - "highlight_line": true
-  Highlights the line your cursor is in
+    - Highlights the line your cursor is in
   - "line_padding_bottom": 1
-  Gives each line a bit of padding underneath it, making for easier to read text
+    - Gives each line a bit of padding underneath it, making for easier to read text
 
 ####Key Bindings
 There are also two Key Binding files: Defaut (global) and User. Again, the User file will override the Default, so it's recommended that you leave the Default as a reference and only edit the User. As you add new values to the User file, you'll see the keyboard hints in the dropdown menu reflect your changes. Cool! 
