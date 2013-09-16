@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Conferences | NIRD Blog]]></title>
+  <link href="http://nird-blog.herokuapp.com//blog/categories/conferences/atom.xml" rel="self"/>
+  <link href="http://nird-blog.herokuapp.com//"/>
+  <updated>2013-09-16T13:50:52-07:00</updated>
+  <id>http://nird-blog.herokuapp.com//</id>
+  <author>
+    <name><![CDATA[NIRD, LLC]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[You Can't Miss What You Can't Measure]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2013/09/16/you-cant-miss-what-you-cant-measure/"/>
+    <updated>2013-09-16T13:39:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2013/09/16/you-cant-miss-what-you-cant-measure</id>
+    <content type="html"><![CDATA[<p>In August, Kerri Miller presented her talk, &ldquo;You Can&rsquo;t Miss What You Can&rsquo;t Measure&rdquo; at Steel City Ruby. You can watch the video <a href="http://steelcityruby.confbots.com/video/72770891">here</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
