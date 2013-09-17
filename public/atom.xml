@@ -4,7 +4,7 @@
   <title><![CDATA[NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2013-09-05T21:28:12-07:00</updated>
+  <updated>2013-09-17T15:23:46-07:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Meet the newest NIRD]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2013/09/17/meet-the-newest-nird-employee/"/>
+    <updated>2013-09-17T09:55:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2013/09/17/meet-the-newest-nird-employee</id>
+    <content type="html"><![CDATA[<p>Hi &ndash; I&rsquo;m Bethany Rentz and I just started working at NIRD on Monday. I&rsquo;m very excited to join the team &ndash; and to start working on client projects! Coming from a large software company &ndash; I&rsquo;m not sure what to expect working at a small office &ndash; but so far everyone is a lot of fun and very enthusiastic. BTW &ndash; we are having an office warming party next week &ndash; which I&rsquo;m sure is also a welcome party for me &ndash; so everyone can check out the new digs: <a href="http://www.meetup.com/NIRD-Seattle/events/136283852/">HQ Warming</a>.</p>
+
+<p>There is a lot of cool stuff going on here &ndash; I got an overview of current projects and what I could work on. There are a couple of projects I will be working on &ndash; and will start getting up to speed on all the NIRD tools.</p>
+
+<p>In the afternoon &ndash; we went out for Frozen Custard &ndash; a NIRD tradition &ndash; and I learned about the company values &ndash; most importantly our focus on the customer and our strong collaboration culture! Then it was time for me to update the NIRD website with my <a href="http://nird.us/bethany">bio</a> &ndash; I made the changes and deployed the code to production.</p>
+
+<p>Over the next couple of weeks I&rsquo;ll be focused on getting up to speed on existing projects and starting to do some development. Hopefully in a future blog post I&rsquo;ll share something more technical.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[You Can't Miss What You Can't Measure]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2013/09/16/you-cant-miss-what-you-cant-measure/"/>
+    <updated>2013-09-16T13:39:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2013/09/16/you-cant-miss-what-you-cant-measure</id>
+    <content type="html"><![CDATA[<p>In August, Kerri Miller presented her talk, &ldquo;You Can&rsquo;t Miss What You Can&rsquo;t Measure&rdquo; at Steel City Ruby. You can watch the video <a href="http://steelcityruby.confbots.com/video/72770891">here</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Customizing Sublime Text]]></title>
@@ -126,13 +150,29 @@
 
 <ul>
 <li>&ldquo;save_on_focus_lost&rdquo;: true
-Automatically saves the file you&rsquo;re editing when you leave it.</li>
+
+<ul>
+<li>Automatically saves the file you&rsquo;re editing when you leave it.</li>
+</ul>
+</li>
 <li>&ldquo;wordWrap&rdquo;: true
-Word wrap set to always be on. **</li>
+
+<ul>
+<li>Word wrap set to always be on.</li>
+</ul>
+</li>
 <li>&ldquo;highlight_line&rdquo;: true
-Highlights the line your cursor is in</li>
+
+<ul>
+<li>Highlights the line your cursor is in</li>
+</ul>
+</li>
 <li>&ldquo;line_padding_bottom&rdquo;: 1
-Gives each line a bit of padding underneath it, making for easier to read text</li>
+
+<ul>
+<li>Gives each line a bit of padding underneath it, making for easier to read text</li>
+</ul>
+</li>
 </ul>
 
 
