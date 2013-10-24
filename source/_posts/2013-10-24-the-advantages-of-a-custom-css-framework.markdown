@@ -1,13 +1,16 @@
 ---
 layout: post
-title: "The advantages of a custom CSS framework"
-date: 2013-10-18 15:00
+title: "The Advantages of a Custom CSS Framework"
+date: 2013-10-24 16:27
 comments: true
-categories: [NIRD, Employees]
-author: Adam Hendricksen
+categories: Learning
+author: Adam Hendriksen 
 ---
 
+
 Your organization is building a premier app. You are confident in your target audience and the excellence of your design, and yet you know that in a rapidly evolving technology environment change is inevitable. NIRD has extensive experience working with a variety of design styles and front-end frameworks. Regardless of the style or framework you choose, the best practice for developing maintainable front-end code is to modularize your front-end elements. Breaking your front-end code into discrete chunks makes it easier to adapt to new technologies, change designs, and add new functionality over the life of the application.
+
+<!-- more -->
 
 Each project starts with web designers translating business needs and customer knowledge into visually appealing style guides for a website. These guides are then “sliced-up” into style and behavior code by front-end developers to efficiently present the back-end business logic to users via a custom user interface.
 
@@ -30,3 +33,4 @@ Designers can approach this problem by limiting their stylistic and behavior cho
 NIRD has found that the best practice is usually to avoid the compromise altogether. We create consistently and efficiently coded styles and behavior for each project, with a focus on remaining true to the design. Our approach is inspired by [Roy Tomeij](http://roytomeij.com/), using SASS partials to create modular visual components to maximize reuse. When a new component is needed, it becomes simple to extend an existing module or add a new one. Style and behavior become separate concerns, making changes inexpensive and easily understood.
 
 You are investing in the success of your app today with an awesome and intuitive design. Take advantage of NIRD's front end expertise to invest in your app's future.
+
