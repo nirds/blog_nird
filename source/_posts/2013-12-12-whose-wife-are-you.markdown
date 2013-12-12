@@ -3,7 +3,7 @@ layout: post
 title: "'Whose Wife Are You?'"
 date: 2013-12-12 13:34
 comments: true
-categories: Appearances, Conferences
+categories: [Appearances, Conferences]
 author: Cheri Allen
 ---
 
