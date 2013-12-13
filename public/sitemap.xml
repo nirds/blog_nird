@@ -2,58 +2,58 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/2013/08/29/about-oauth/</loc>
-        <lastmod>2013-09-19T17:12:10-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/2013/09/04/nirdcast-intro-to-git/</loc>
-        <lastmod>2013-09-19T17:12:10-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/2013/09/05/customizing-sublime-text/</loc>
-        <lastmod>2013-09-19T17:12:10-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>
             http://nird-blog.herokuapp.com//blog/2013/09/16/you-cant-miss-what-you-cant-measure/
         </loc>
-        <lastmod>2013-12-12T13:53:47-08:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/2013/09/17/meet-the-newest-nird-employee/</loc>
-        <lastmod>2013-09-19T17:12:10-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>
             http://nird-blog.herokuapp.com//blog/2013/10/24/the-advantages-of-a-custom-css-framework/
         </loc>
-        <lastmod>2013-10-24T16:30:12-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/2013/12/12/whose-wife-are-you/</loc>
-        <lastmod>2013-12-12T13:52:02-08:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//about/</loc>
-        <lastmod>2013-09-19T17:12:10-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//archives/</loc>
-        <lastmod>2013-12-12T13:53:47-08:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/archives/</loc>
-        <lastmod>2013-12-12T13:53:47-08:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/</loc>
-        <lastmod>2013-12-12T13:53:47-08:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//</loc>
-        <lastmod>2013-12-12T13:53:47-08:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//robots.txt</loc>
-        <lastmod>2013-09-04T10:49:05-07:00</lastmod>
+        <lastmod>2013-12-12T15:19:59-08:00</lastmod>
     </url>
 </urlset>
