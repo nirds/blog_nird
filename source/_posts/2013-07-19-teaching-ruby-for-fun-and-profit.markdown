@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "'Teaching Ruby for Fun and Profit'"
-date: 2013-12-19 14:18
+title: "'Teaching Ruby'"
+date: 2013-07-19 14:18
 comments: true
 categories: [Appearances, Conferences]
 author: Cheri Allen 
