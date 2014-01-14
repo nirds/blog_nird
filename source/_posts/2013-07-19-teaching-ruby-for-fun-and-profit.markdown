@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'Teaching Ruby'"
+title: "Teaching Ruby"
 date: 2013-07-19 14:18
 comments: true
 categories: [Appearances, Conferences]
