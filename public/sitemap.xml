@@ -39,24 +39,30 @@
         <lastmod>2014-01-14T13:10:07-08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://nird-blog.herokuapp.com//blog/2014/01/14/ruby-on-rails-bootcamp-in-seattle/
+        </loc>
+        <lastmod>2014-01-14T17:38:03-08:00</lastmod>
+    </url>
+    <url>
         <loc>http://nird-blog.herokuapp.com//about/</loc>
         <lastmod>2014-01-14T13:10:07-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//archives/</loc>
-        <lastmod>2014-01-14T13:39:51-08:00</lastmod>
+        <lastmod>2014-01-14T17:38:03-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/archives/</loc>
-        <lastmod>2014-01-14T13:39:51-08:00</lastmod>
+        <lastmod>2014-01-14T17:38:03-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/</loc>
-        <lastmod>2014-01-14T13:39:51-08:00</lastmod>
+        <lastmod>2014-01-14T17:38:03-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//</loc>
-        <lastmod>2014-01-14T13:39:51-08:00</lastmod>
+        <lastmod>2014-01-14T17:38:03-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//robots.txt</loc>
