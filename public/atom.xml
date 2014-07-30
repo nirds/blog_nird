@@ -4,7 +4,7 @@
   <title><![CDATA[NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2014-01-22T14:26:31-08:00</updated>
+  <updated>2014-07-30T16:09:12-07:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Where in the world are the NIRDS?]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2014/07/30/where-in-the-world-are-the-nirds/"/>
+    <updated>2014-07-30T14:39:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2014/07/30/where-in-the-world-are-the-nirds</id>
+    <content type="html"><![CDATA[<p>The NIRDS have been busy this year sharing our love of Ruby, Rails and programming. One of the ways we do this is by sponsoring and speaking at conferences through-out the world. If you haven’t been to a Ruby conference &ndash; I highly recommend attending one. Different conferences have their own personalities &ndash; so try out a couple ’til you find one you like.</p>
+
+<p>Conferences a great way to meet other Rubyists from around the world &ndash; to exchange ideas and learn about what cool projects people are working on. Of course you can do a lot of this online, but it&rsquo;s great to meet face-to-face sometimes. When we aren’t attending conferences &ndash; you might find a NIRD at <a href="http://www.seattlerb.org/">Seattle.rb</a> or one of the other coding meet ups around Seattle.</p>
+
+<p>Here’s a round-up of some of the places we’ve been so far this year:</p>
+
+<h2><a href="https://ruby.onales.com/">Ruby on Ales</a></h2>
+
+<p>This conference is every spring in Bend, Oregon. Bend is known for the great outdoors and beer and isn&rsquo;t too far a trip from Seattle. NIRD was one of the sponsors this year (we gave out the super cool NIRD pint glasses!) And Kerri gave a talk on &ldquo;Harry Potter and the Legacy Code Base&rdquo;.</p>
+
+<p>Here’s a the talk <a href="https://www.youtube.com/watch?v=_sw9mhKtgCk">video</a>
+and the <a href="https://speakerdeck.com/kerrizor/harry-potter-and-the-legacy-code-base-ruby-on-ales">slides</a> from the conference.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://abrilproruby.com/">Abril Pro Ruby</a></h2>
+
+<p>Renée was happy to leave rainy Seattle for warm, sunny Brazil to be a keynote speaker at this conference. She spoke about &ldquo;Classic Algorithms in Ruby&rdquo;. You should check out this talk if you&rsquo;ve thought Big-O notation was only something that comes up in tech interviews.</p>
+
+<p>Here’s the talk <a href="https://www.youtube.com/watch?v=eVulPTs8wSA">video</a>
+ and the <a href="https://speakerdeck.com/reneedv/classic-algorithms-in-ruby">slides</a>.</p>
+
+<h2><a href="http://programme2014.scottishrubyconference.com/">Scottish Ruby Conference</a></h2>
+
+<p>In May, Kerri traveled to Scotland to give a talk on &ldquo;Concurrency for !Dummies (Who Don&rsquo;t Get It (&hellip;Yet))&rdquo;. (In case you haven&rsquo;t noticed &ndash; the NIRDs like to travel).</p>
+
+<p>Here&rsquo;s the talk <a href="http://vimeo.com/97522205">video</a>
+ and the <a href="https://speakerdeck.com/kerrizor/concurrency-for-dummies-who-dont-get-it-dot-dot-dot-yet">slides</a>.</p>
+
+<h2>What&rsquo;s next?</h2>
+
+<p>There are more conferences coming up this year on NIRD&rsquo;s calendar.  As I&rsquo;m writing this post Kerri is on her way to <a href="http://burlingtonrubyconference.com/">Burlington Ruby</a>. And <a href="http://cascadiaruby.com/">Cascadia Ruby</a> is just around the corner &ndash; down in Portland.</p>
+
+<p>And feel free to contact us if you&rsquo;d like us to come speak at your event.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails Bootcamp in Seattle]]></title>
