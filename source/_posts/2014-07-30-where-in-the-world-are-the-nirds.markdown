@@ -9,7 +9,7 @@ author: Bethany Rentz
 
 The NIRDS have been busy this year sharing our love of Ruby, Rails and programming. One of the ways we do this is by sponsoring and speaking at conferences through-out the world. If you haven’t been to a Ruby conference - I highly recommend attending one. Different conferences have their own personalities - so try out a couple ’til you find one you like.
 
-Conferences a great way to meet other Rubyists from around the world - to exchange ideas and learn about what cool projects people are working on. Of course you can do a lot of this online, but it's great to meet face-to-face sometimes. When we aren’t attending conferences - you might find a NIRD at [Seattle.rb](http://www.seattlerb.org/) or one of the other coding meet ups around Seattle. 
+Conferences are a great way to meet other Rubyists from around the world - to exchange ideas and learn about what cool projects people are working on. Of course you can do a lot of this online, but it's great to meet face-to-face sometimes. When we aren’t attending conferences - you might find a NIRD at [Seattle.rb](http://www.seattlerb.org/) or one of the other coding meet ups around Seattle. 
 
 Here’s a round-up of some of the places we’ve been so far this year:
 
