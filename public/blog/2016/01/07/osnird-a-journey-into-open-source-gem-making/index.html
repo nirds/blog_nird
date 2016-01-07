@@ -1,0 +1,208 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>OSNird: A Journey Into Open Source Gem-Making  | NIRD Blog</title>
+
+<meta name="author" content="NIRD, LLC"> 
+
+<meta name="description" content="Part 1: Introduction to GracePeriod &amp; README-Driven-Development OSNird (for Open Source NIRD) is a new program here where NIRDs can spend work &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="NIRD Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NIRD Blog</a></h1>
+<h4>Cool stuff that we do and like</h4>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="http://nird.us">NIRD Website</a></li>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main-navigation">
+  <li><a href="http://nird.us">NIRD Website</a></li>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:nird-blog.herokuapp.com/">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">OSNird: A Journey Into Open Source Gem-Making</h2>
+	<div class="entry-content"><h3><strong>Part 1: Introduction to GracePeriod &amp; README-Driven-Development</strong></h3>
+
+<hr />
+
+<p>  OSNird (for Open Source NIRD) is a new program here where NIRDs can spend work time contributing to open source projects. One team (Mike Pence, Adam Bell and myself) are writing a gem to address the imbalance that occurs when we place urgent concerns over important concerns and end up with technical debt. We are excited to take you with us on our learning journey in order to inspire more people to contribute to open source.</p>
+
+<h3><strong>The Vision:</strong></h3>
+
+<hr />
+
+<p>  We all have those moments. Our feature must be shipped today so we cut corners. It’s hard to keep track of those pieces, especially when our manager now considers our feature done and has moved on to bigger and better features for us to implement. To extend and mix  the metaphor: all those cut corners are essentially swept under the rug. You won’t notice a couple under the rug, but eventually the rug becomes difficult to walk over without pain. Often by the time we are tripping over the technical debt, we have forgotten the story of that corner and how we were planning on fixing it. This is very inefficient. GracePeriod is designed to deal with these concerns. It will help developers hold their managers and themselves accountable to keep track of those corners and stay on top of technical debt. Through GracePeriod, we will be able to record contextual information about our  short cuts and our plans for correcting them so we will have a quick refresher available when the debt comes due.</p>
+
+<!-- more -->
+
+
+<h3><strong>The Team:</strong></h3>
+
+<hr />
+
+<p>  The GracePeriod contingent of OSNird is pretty new to open source contribution. Before this project, Mike was the only team member who had developed any gems. Mike is our team’s senior developer and is providing a lot of guidance to the rest of the team. Adam and I are junior developers, excited to be getting our feet wet in open source. We all have very different skills and we have really been enjoying working together to make a helpful tool.</p>
+
+<p>  We are a decentralized team. NIRD has a flexible work from home policy and has team members from all around the country. So with Mike in Florida, and Adam &amp; I in Washington, this is also great experience in remote collaboration.</p>
+
+<h3><strong>The Initial Exploration:</strong></h3>
+
+<hr />
+
+<p>  Our first step was to look at other gems that tackle similar problems as GracePeriod or that provide well-implemented gem patterns. Rubocop, cucumber and rspec are all gems that you can run from the command line that give you information about your app. Factory_girl is an excellent implementation of a  flexible file structure. Additionally, contracts.ruby provides a good example for establishing rules that raise various warnings or errors when they are broken.</p>
+
+<h3><strong>README-Driven-Development:</strong></h3>
+
+<hr />
+
+<p>  In order to get our team on the same page with the application, we first wrote a README of what we wanted to build. As with all agile projects, the actual scope and implementation details will change over time, but creating a unifying document was a great way to get our ideas down and discuss any obvious differences in understanding as to what this gem is for.</p>
+
+<p>  It was during this process that we came up with the name for the gem. Our first thought was time bomb dsl. While a time bomb is a relatively accurate metaphor for what we are doing, it is an unnecessarily  violent image. After some exploration, we started looking at vocabulary around the concept of debt, since it is technical debt that we are discussing. In the language of debt, a grace period is a period of time where no payment is required but the debt is still present. Grace periods come to an end and then there are notifications that repayments must start. This is our goal for this gem &ndash; to notify developers and their managers that the grace extended to pieces of technical debt has come to an end and payment is coming due.</p>
+
+<p>  One of the key parts of our README-driven-development process was defining the user experience. How would grace periods be defined and what would be involved in their implementation? This will continue to be a shifting process. Putting a definition to our initial ideas, however, was a great way to get juniors as well as seniors involved early in the creation process since developing ideas and interfaces does not require deep technical know-how. This ability to pull in folks that don’t have the technical experience with gems increased buy-in and allowed the team to coalesce around a central document that everyone had the opportunity to contribute to.</p>
+
+<p>  We hope that you will follow us on our journey as we learn how to make a really cool gem and contribute to open source. We will keep sharing what we learn on this blog, and you can also tune in to our livestreamed mob programming sessions on Fridays from 8am-10am PST at <a href="https://www.livecoding.tv/wmuengineer/">https://www.livecoding.tv/wmuengineer/</a> . There&rsquo;s even a live chat if you want to interact with us.</p>
+
+<p>Stay tuned for the next post in this series, about setup, configuration, and starting the gem.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i>&nbsp;<time datetime="2016-01-07T15:16:00-08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2016</time></div>
+	<div class="tags">
+
+<i class="icon-tags"></i>&nbsp;
+
+	<a class='category' href='/blog/categories/osnird/'>OSNird</a>, <a class='category' href='/blog/categories/open-source/'>Open Source</a>
+
+
+</div>
+	<div class="author">
+  
+
+<i class="icon-star-empty"></i>&nbsp;<span class="byline author vcard">Posted by <span class="fn">Whitney Levis</span></span>
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016<a href="http://nird.us/">
+
+    NIRD, LLC
+</a>
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
