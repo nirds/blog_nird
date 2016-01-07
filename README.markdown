@@ -1,3 +1,27 @@
+####Blogging with Octopress
+
+The [documentation](http://octopress.org/docs/blogging/),
+the [NIRD blog repo](https://github.com/nirds/blog_nird),
+the [Heroku repo](https://dashboard.heroku.com/apps/nird-blog/settings)
+
+Our blog is using Ruby 2.0.0.
+
+Clone the repo locally. Run 'rake new_post["Bradley Promoted to CFO"]' (your title goes within ""). Open the generated file, which should be in 'source/_posts'. Update the opening chunk of yaml as appropriate. Be sure to add an 'author: Your Name' attribute. We don't have a specific list of categories yet, so just make some stuff up or use ones that have been used before.
+
+Under the ------ that closes the yaml, write your post in markdown. If you'd like to preview it, run 'rake generate' then 'rake preview'. It will then be available at localhost:4000.
+
+When you're all done, commit and push to the Github and Heroku repos.
+
+Bam! Your post is live and you're a superhero.
+
+*not actually a superhero.
+
+If you'd like to make changes to the styling, do so in the 'sass/custom/_styles.scss' file. It should override all other style sheets. To make those changes actually stick, after editing the file, run 'rake clean' then 'rake generate' to recompile the sass. This doesn't always actually work, but usually. [Documentation.](http://octopress.org/docs/theme/styles/)
+
+We have a [theme](https://github.com/cherimarie/cleanpress_custom) installed that Cheri forked from someone else so she could customize it. It's pretty sweet. If you'd like to change the theme, Google up a good one, then use their provided instructions to install it. Do NOT make changes to files within the .themes/ directory of the blog repo.
+
+Godspeed!
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
@@ -7,36 +31,4 @@ Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 3. **Third party integration is simple** with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
 4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
 5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
-
-
-## Documentation
-
-Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
-
-
-## Contributing
-
-[![Build Status](https://travis-ci.org/imathis/octopress.png?branch=master)](https://travis-ci.org/imathis/octopress)
-
-We love to see people contributing to Octopress, whether it's a bug report, feature suggestion or a pull request. At the moment, we try to keep the core slick and lean, focusing on basic blogging needs, so some of your suggestions might not find their way into Octopress. For those ideas, we started a [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plugins), where you can link your own Octopress plug-in repositories. For the future, we're thinking about ways to easier add them them into our main releases.
-
-
-## License
-(The MIT License)
-
-Copyright © 2009-2013 Brandon Mathis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-#### If you want to be awesome.
-- Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nirds/blog_nird/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
