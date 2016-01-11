@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OSNird | NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//blog/categories/osnird/atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2016-01-07T15:35:08-08:00</updated>
+  <updated>2016-01-11T15:16:48-08:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -22,7 +22,7 @@
 
 <hr />
 
-<p>  OSNird (for Open Source NIRD) is a new program here where NIRDs can spend work time contributing to open source projects. One team (Mike Pence, Adam Bell and myself) are writing a gem to address the imbalance that occurs when we place urgent concerns over important concerns and end up with technical debt. We are excited to take you with us on our learning journey in order to inspire more people to contribute to open source.</p>
+<p>  OSNird (for Open Source NIRD) is a new program here where NIRDs can spend work time contributing to open source projects. One team (Mike Pence, Adam Bell and myself) is writing a gem to address the imbalance that occurs when we place urgent concerns over important concerns and end up with technical debt. We are excited to take you with us on our learning journey in order to inspire more people to contribute to open source.</p>
 
 <h3><strong>The Vision:</strong></h3>
 
@@ -37,9 +37,9 @@
 
 <hr />
 
-<p>  The GracePeriod contingent of OSNird is pretty new to open source contribution. Before this project, Mike was the only team member who had developed any gems. Mike is our team’s senior developer and is providing a lot of guidance to the rest of the team. Adam and I are junior developers, excited to be getting our feet wet in open source. We all have very different skills and we have really been enjoying working together to make a helpful tool.</p>
+<p>  The GracePeriod contingent of OSNird is pretty new to open source contribution. Before this project, Mike was the only team member who had developed any gems. Mike is our team’s senior developer and is providing a lot of guidance to the rest of the team. Adam and I are junior developers, excited to be getting our feet wet in open source. We all have very different skills, and we have really been enjoying working together to make a helpful tool.</p>
 
-<p>  We are a decentralized team. NIRD has a flexible work from home policy and has team members from all around the country. So with Mike in Florida, and Adam &amp; I in Washington, this is also great experience in remote collaboration.</p>
+<p>  We are a decentralized team. NIRD has a flexible work from home policy and has team members from all around the country. So with Mike in Florida, and Adam and me in Washington, this is also great experience in remote collaboration.</p>
 
 <h3><strong>The Initial Exploration:</strong></h3>
 
@@ -51,15 +51,15 @@
 
 <hr />
 
-<p>  In order to get our team on the same page with the application, we first wrote a README of what we wanted to build. As with all agile projects, the actual scope and implementation details will change over time, but creating a unifying document was a great way to get our ideas down and discuss any obvious differences in understanding as to what this gem is for.</p>
+<p>  In order to get our team on the same page with the application, we first wrote a README of what we wanted to build. As with all agile projects, the actual scope and implementation details will change over time, but creating a unifying document was a great way to get our ideas down and discuss any obvious differences in understanding what this gem is for.</p>
 
 <p>  It was during this process that we came up with the name for the gem. Our first thought was time bomb dsl. While a time bomb is a relatively accurate metaphor for what we are doing, it is an unnecessarily  violent image. After some exploration, we started looking at vocabulary around the concept of debt, since it is technical debt that we are discussing. In the language of debt, a grace period is a period of time where no payment is required but the debt is still present. Grace periods come to an end and then there are notifications that repayments must start. This is our goal for this gem &ndash; to notify developers and their managers that the grace extended to pieces of technical debt has come to an end and payment is coming due.</p>
 
-<p>  One of the key parts of our README-driven-development process was defining the user experience. How would grace periods be defined and what would be involved in their implementation? This will continue to be a shifting process. Putting a definition to our initial ideas, however, was a great way to get juniors as well as seniors involved early in the creation process since developing ideas and interfaces does not require deep technical know-how. This ability to pull in folks that don’t have the technical experience with gems increased buy-in and allowed the team to coalesce around a central document that everyone had the opportunity to contribute to.</p>
+<p>  One of the key parts of our README-driven-development process was defining the user experience. How would grace periods be defined? What would be involved in their implementation? This will continue to be a shifting process. Putting a definition to our initial ideas, however, was a great way to get juniors as well as seniors involved early in the creation process since developing ideas and interfaces does not require deep technical know-how. This ability to pull in folks that don’t have the technical experience with gems increased buy-in and allowed the team to coalesce around a central document that everyone had the opportunity to contribute to.</p>
 
 <p>  We hope that you will follow us on our journey as we learn how to make a really cool gem and contribute to open source. We will keep sharing what we learn on this blog, and you can also tune in to our livestreamed mob programming sessions on Fridays from 8am-10am PST at <a href="https://www.livecoding.tv/wmuengineer/">https://www.livecoding.tv/wmuengineer/</a> . There&rsquo;s even a live chat if you want to interact with us.</p>
 
-<p>Stay tuned for the next post in this series, about setup, configuration, and starting the gem.</p>
+<p>Stay tuned for the next post in this series, which will be about setup, configuration, and starting the gem.</p>
 ]]></content>
   </entry>
   
