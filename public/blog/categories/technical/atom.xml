@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical | NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//blog/categories/technical/atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2016-01-11T15:16:48-08:00</updated>
+  <updated>2016-02-08T17:14:51-08:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Retroactively Setting up a Gem/Engine to Use Rspec]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2016/02/08/retroactively-setting-up-a-gem-slash-engine-to-use-rspec/"/>
+    <updated>2016-02-08T12:51:00-08:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2016/02/08/retroactively-setting-up-a-gem-slash-engine-to-use-rspec</id>
+    <content type="html"><![CDATA[<p>Some of us NIRDs built a gem recently, <a href="https://github.com/nirds/ng_will_paginate">ng_will_paginate</a>, to allow easy use of the fabulous ng-will-paginate gem with an Angular-fronted Rails application. This is the first time we had built a gem that uses assets, and it was an excellent learning opportunity. As mentioned in <a href="link">Patrick’s post</a>, we traveled a winding path while building this gem. Namely, we were extracting the code for it from another project, which meant we were pulling in fully formed code, and not practicing TDD (please don’t judge us). As a result, we built the gem without the proper testing options, so we needed to add them retroactively. This was a complicated thing to research and figure out, but implementation ended up not being too difficult.</p>
+
+<!-- more -->
+
+
+<p>Since our gem pulls in assets for the client app, it’s considered an engine (you can see this mentioned in many(link) of(link) the(link) guides(link) linked to in Patrick’s post(link)). To test it properly, we&rsquo;ll write code in the dummy app that uses our gem’s functionality, then write javascript specs in the dummy app to test that that functionality is working. In contrast, if we were just writing Ruby code, we’d be able to test with Rspec within the gem’s spec/ directory.</p>
+
+<p>We’ll get the dummy app by generating a new plugin project with the same name as our gem, with options to include a dummy app. Then, we can move it into our real project.</p>
+
+<ul>
+<li>Navigate outside the gem directory</li>
+<li>Generate a plugin with the same name as your gem (gem-name in example), with following options: $rails plugin new gem-name &mdash;mountable &mdash;dummy-path=spec/dummy &mdash;skip-test-unit</li>
+<li>Move the generated spec/dummy/ directory to your gem&rsquo;s spec/ directory: $ mv gem-name/spec/dummy/   path-to/your-actual/gem_name/spec/</li>
+<li>Delete that generated plugin, it&rsquo;s worthless now</li>
+<li>Navigate back to your gem&rsquo;s directory</li>
+<li>Add the databse that dummy app is configured to use (sqlite3 by default) as a development dependency in your gem&rsquo;s gemspec file</li>
+<li>Run $ bundle install</li>
+</ul>
+
+
+<p>Next, we’ll write some tests and run them.</p>
+
+<ul>
+<li>In the dummy app, write code that incorporates your gem’s functionality in the way you expect client apps to use it. For us, this meant building a tiny Angular app that had our gem’s service as a dependency, and a single controller that used the service’s methods. This required adding rails, coffee-rails, and angularjs-rails gems to our gemspec file. Because we planned to use <a href="http://jasmine.github.io/">Jasmine</a> to test, we also added jasmine-rails to the gemspec at this step. Run $ bundle install again after all gemspec changes.</li>
+<li>Next, in the dummy app, write your tests. We used jasmine, and the spec for our service was located at spec/dummy/spec/javascripts/paginationServiceSpec.js.coffee.</li>
+<li>We run our tests the simplest way: by starting a Rails server and visiting <a href="http://localhost:3000/specs.">http://localhost:3000/specs.</a> Note that this Rails server must be started from within the dummy app, not the gem’s root directory.</li>
+<li>Now, you can iterate on writing code that more accurately uses the gem’s functionality, changing the gem’s code, and writing better tests, in whatever order you like. Just refresh <a href="http://localhost:300/specs">http://localhost:300/specs</a> to re-run the test suite.</li>
+</ul>
+
+
+<p>Here are some resources that helped us, and might help you:</p>
+
+<ul>
+<li><a href="http://rakeroutes.com/blog/write-a-gem-for-the-rails-asset-pipeline/">How to Write a Gem to Serve Static Files</a></li>
+<li><a href="http://www.sitepoint.com/create-ruby-gem-jquery-plugin-basics/">Create a Ruby Gem for a jQuery Plugin</a></li>
+<li><a href="http://edgeguides.rubyonrails.org/engines.html">Getting Started With Engines</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Customizing Sublime Text]]></title>
