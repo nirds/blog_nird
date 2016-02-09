@@ -1,0 +1,197 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>The First Gem Is The Sweetest  | NIRD Blog</title>
+
+<meta name="author" content="NIRD, LLC"> 
+
+<meta name="description" content="As my colleagues have mentioned in previous posts, we NIRDs have begun an initiative to contribute more to the open source community. As a junior &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="NIRD Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NIRD Blog</a></h1>
+<h4>Cool stuff that we do and like</h4>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="http://nird.us">NIRD Website</a></li>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main-navigation">
+  <li><a href="http://nird.us">NIRD Website</a></li>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:nird-blog.herokuapp.com/">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">The First Gem Is the Sweetest</h2>
+	<div class="entry-content"><p>As my colleagues have mentioned in previous posts, we NIRDs have begun an initiative to contribute more to the open source community. As a junior developer who had never contributed to the open source community, this put me on unfamiliar ground. For many, that first step into the unknown is daunting &ndash; for me it was terrifying. I mean, I’m mostly self-taught, and as a result, I have a paralyzing fear of everyone discovering that I am a <a href="https://en.wikipedia.org/wiki/Impostor_syndrome">complete fraud</a>. ::Deep breath:: Until now, irrational self-preservation against an imaginary threat has won out over the desire to give back to the community that helped me get to where I am today; but that’s all changed (j/k I’m still scared, but I’m trying to be braver about <a href="http://fortune.com/2014/05/23/the-extraordinary-depressing-power-of-failing-upwards/">failing upwards</a>).</p>
+
+<!-- more -->
+
+
+<p>Thankfully, I wasn’t on my own &ndash; I was a part of a team! After dipping our toes into the open source pool by making a small contribution to someone else’s project, we decided that we wanted to learn something new &ndash; we wanted to build a gem. Since we were new to the process, we wanted to start with something small; conveniently, we had recently written a small amount of Javascript to integrate the handy <a href="https://github.com/mislav/will_paginate">will_paginate gem</a> into an AngularJS app, so this seemed like as good a point as any from which to proceed.</p>
+
+<p>Since we had never built a gem, we began by researching the process. <a href="http://brandonhilkert.com/books/build-a-ruby-gem/">Build a Ruby Gem by Brandon Hilkert</a> was thorough coverage of the subject &ndash; but actually way more than we needed! See, we wanted to build a gem that fed some Javascript and CSS into the asset pipeline of the apps that would use it &ndash; in the larger scheme of things, that’s not too heavy duty. Luckily, there are several <a href="https://gorails.com/episodes/creating-gems-for-frontend-javascript-libraries">quick</a> and <a href="http://www.sitepoint.com/create-ruby-gem-jquery-plugin-basics/">dirty</a> <a href="http://brandonhilkert.com/blog/how-to-build-a-rails-engine/">guides</a> out there on to how to do this!</p>
+
+<p>Since we had already built the feature into a project, it was really straightforward to pull it out into a gem. First, we abstracted the existing code as much as we could and took out any specific references to the app that it lived in. Generic code is reusable code, and what is a gem if not reusable code? Once we had done that, we just followed the guides linked to above on how to turn the code into a gem. Let me lift the main points from <a href="http://carlosbecker.com/posts/gemify-your-assets/">Carlos Becker’s excellent post</a> to demonstrate how straightforward the process is:</p>
+
+<ol>
+<li><p>Create the project skeleton
+All this takes is one command in the terminal!</p></li>
+<li><p>Create the vendor/assets folder
+In the case of our gem, we actually created the app/assets folder. Why? Because, if you’re including someone else’s javascript in a project, for example, convention dictates that you put it in the vendor/assets folder. It’s not like anything is going to explode if you put javascript you wrote in vendor/assets, but the contents of vendor/assets are understood to be something akin to gems &ndash; code by other people that you include in your project. Since we wrote this code, it’s going in our assets folder.</p></li>
+<li><p>Copy the assets to the folders
+All we did was move the files from the app we pulled our code from to PRETTY MUCH THE SAME EXACT PLACE (app/assets) in the gem we just made. Magical!</p></li>
+<li><p>Test
+Well&hellip;it can’t all be easy. This step is conquerable, but was definitely the hardest part of this project &ndash; so we’ll cover it in another post.</p></li>
+</ol>
+
+
+<p>Once all that was done, we tried out our new gem in our original project by adding it to that project’s gemfile and then bundling. Viola! ng_will_paginate delivered up some nicely paginated angular objects via rails and the will_paginate gem!</p>
+
+<p>There are two morals to this story:</p>
+
+<p>The Ruby on Rails community is a wonderland of handy stuff created by people who are enthusiastic about making useful stuff. This isn’t limited to incredibly niche gems &ndash; it includes blog posts about how to make incredibly niche gems!
+The bar is easier to surmount than our fears may be telling us &ndash; we too, can produce something that is helpful to the community.</p>
+
+<p>I can’t count the number of times stumbling across a casual mention of some small bit of Rails wisdom has helped me in my path to becoming a better developer. If you’ve solved a problem, I can almost guarantee that someone out there will benefit from it if you make it available.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i>&nbsp;<time datetime="2016-02-09T12:01:00-08:00" pubdate data-updated="true">Feb 9<span>th</span>, 2016</time></div>
+	<div class="tags">
+
+<i class="icon-tags"></i>&nbsp;
+
+	<a class='category' href='/blog/categories/osnird/'>OSNird</a>, <a class='category' href='/blog/categories/open-source/'>Open Source</a>
+
+
+</div>
+	<div class="author">
+  
+
+<i class="icon-star-empty"></i>&nbsp;<span class="byline author vcard">Posted by <span class="fn">Patrick Dent</span></span>
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016<a href="http://nird.us/">
+
+    NIRD, LLC
+</a>
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
