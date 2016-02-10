@@ -22,6 +22,9 @@ If you'd like to make changes to the styling, do so in the 'sass/custom/_styles.
 
 We have a [theme](https://github.com/cherimarie/cleanpress_custom) installed that Cheri forked from someone else so she could customize it. It's pretty sweet. If you'd like to change the theme, Google up a good one, then use their provided instructions to install it. Do NOT make changes to files within the .themes/ directory of the blog repo.
 
+The blog is hosted on Heroku, so deploy with the following in terminal:
+```git push heroku master```
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
