@@ -4,7 +4,7 @@
   <title><![CDATA[NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2016-02-10T12:23:40-08:00</updated>
+  <updated>2016-03-03T11:13:28-08:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -12,6 +12,94 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Foreman and Subcontract To Simplify Your Life]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2016/03/01/using-foreman-and-subcontract-to-simplify-your-life/"/>
+    <updated>2016-03-01T16:49:00-08:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2016/03/01/using-foreman-and-subcontract-to-simplify-your-life</id>
+    <content type="html"><![CDATA[<p>When working on a complex application, you may need more than one application or service running at one time. This can be a pain to manage without great tools like the <a href="https://github.com/ddollar/foreman">Foreman</a> and <a href="https://github.com/pitluga/subcontractor">Subcontractor</a> gems, because you would have to have all of those apps and services open in different tab in order for your one complex app to function properly.</p>
+
+<!-- more -->
+
+
+<p>Let’s use a simple example. Say we’re developing on a customer_app that requires three other apps: crude_app, silly_app, encouraging_app, and each of these applications sends and receives data from the customer_app.</p>
+
+<p>In this kind of situation, you might open up multiple tabs and start all of your applications or services &ndash; except one &ndash; and then spend up to 30 minutes asking “Why isn’t this working?” More often, though, you might start up all the right things, but be irritated by how tedious that is. Even if it’s only three applications, that time adds up.</p>
+
+<p>Fortunately, there is a solution. The Foreman and Subcontractor gems help manage this for you. Foreman allows you to manage multiple processes with a Procfile containing a list of all of the applications and/or services you’d like to start up at the same time. Subcontractor allows you to start that process from different directories and under the gem configuration specified by <a href="https://rvm.io/">RVM</a> or <a href="https://github.com/rbenv/rbenv">RBENV</a>. There are many ways to <a href="https://github.com/pitluga/subcontractor">configure your Procfile</a> so you can set-up your application just the way you want it; for this post I’ll focus on basic setup,  a couple of small problems, and what I did to get around them.</p>
+
+<p>Here is what you have to do to get started:</p>
+
+<ol>
+<li>Install Foreman and Subcontractor</li>
+<li>Write a Procfile that describes what services you apps you want to run</li>
+<li>Type “foreman start&#8221; in terminal</li>
+</ol>
+
+
+<p><strong>Installing Foreman and Subcontractor:</strong></p>
+
+<p>Foreman and Subcontractor are meant to be run outside the context ruby-gemset, if you use RVM, or any other version manager of your application. Let’s return to our example client_app, with the folder structure below. You want to make sure you’re installing the gems in the client folder not in the subfolders that contain application code.</p>
+
+<p><strong>Writing a Procfile:</strong></p>
+
+<p>Each entry in a Procfile (one entry per application or service) follows the basic format:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">App_name</span><span class="ss">:subcontract</span> <span class="n">package</span> <span class="n">manager</span><span class="p">,</span> <span class="n">gemset</span> <span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">termination</span> <span class="n">signal</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">port</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Our example client_app would have a Procfile that includes info for crude_app, funny_app, and customer_app:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">crude</span><span class="p">:</span> <span class="n">subcontract</span> <span class="o">--</span><span class="n">rvm</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="vi">@crude_app</span> <span class="o">--</span><span class="n">chdir</span> <span class="o">.</span><span class="n">/crude_app</span> <span class="o">--</span><span class="n">signal</span> <span class="no">INT</span> <span class="o">--</span> <span class="n">rails</span> <span class="n">s</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">3001</span>
+</span><span class='line'><span class="ss">funny</span><span class="p">:</span> <span class="n">subcontract</span> <span class="o">--</span><span class="n">rvm</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="vi">@funny_app</span> <span class="o">--</span><span class="n">chdir</span> <span class="o">.</span><span class="n">/funny_app</span> <span class="o">--</span><span class="n">signal</span> <span class="no">INT</span> <span class="o">--</span> <span class="n">rails</span> <span class="n">s</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">3001</span>
+</span><span class='line'><span class="ss">customer</span><span class="p">:</span> <span class="n">subcontract</span> <span class="o">--</span><span class="n">rvm</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="vi">@customer_app</span><span class="o">--</span><span class="n">chdir</span> <span class="o">.</span><span class="n">/customer_app</span> <span class="o">--</span><span class="n">signal</span> <span class="no">INT</span> <span class="o">--</span> <span class="n">rails</span> <span class="n">s</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">3001</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let’s go through the crude_app Procfile entry piece by piece.</p>
+
+<p><code>crude</code>                    &ndash; abbreviation for crude_app</p>
+
+<p><code>subcontract</code>              &ndash; flags the following info to be passed into subcontract</p>
+
+<p><code>--rvm</code>                    &ndash; RVM is the package manager</p>
+
+<p><code>ruby-2.2.3@crude_app</code>     &ndash; our gemset for this project</p>
+
+<p><code>--chdir</code>                  &ndash; flag signifying that you’re changing directories</p>
+
+<p><code>./crude_app</code>              &ndash; the directory you’re changing to</p>
+
+<p><code>--signal</code>                 &ndash; flag signifying that you’re designating termination signal</p>
+
+<p><code>INT</code>                      &ndash; the actual termination signal type</p>
+
+<p><code>-- rails s -p 300x</code>       &ndash; this is the command to start the process</p>
+
+<p><strong>Foreman Start:</strong>
+After you’ve written your Procfile, make sure you’re in the directory containing the Procfile, then type  “foreman start” in your terminal. Now you’re up and running.</p>
+
+<p>As great as Foreman and Subcontractor are, there are a couple of downsides. These downsides are small, but can cause some hitches. I’ll go through them now, and share with you the workarounds I use.</p>
+
+<p><strong> All of the rails development logs for each application are in the same window.</strong></p>
+
+<p>I use the logs as the main source of information when I’m working, and it would be easy to get logs from  crude_app, silly_app, and encouraging_app mixed up. To get around this I’ll open another tab and tail the log manually so i know what’s coming from what.</p>
+
+<p><strong> Pry breaks all of the things</strong></p>
+
+<p>If I’m using pry to debug one of our applications that uses Foreman, I’ll run into trouble. When I reach the point where pry will stop execution of my application, I can’t interact with it in the terminal.</p>
+
+<p>To deal with this, I navigate into the Procfile and comment out the line that starts the specific application I’m debugging, then I start that app manually in another tab.</p>
+
+<p>These are pretty minor problems, and they are the only problems I’ve found working with foreman and subcontractor. Overall, these issues are tiny compared with the time I save &ndash; given the choice, I’ll go with Foreman and Subcontractor every time.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The First Gem Is The Sweetest]]></title>
@@ -27,7 +115,7 @@
 
 <p>Since we had never built a gem, we began by researching the process. <a href="http://brandonhilkert.com/books/build-a-ruby-gem/">Build a Ruby Gem by Brandon Hilkert</a> was thorough coverage of the subject &ndash; but actually way more than we needed! See, we wanted to build a gem that fed some Javascript and CSS into the asset pipeline of the apps that would use it &ndash; in the larger scheme of things, that’s not too heavy duty. Luckily, there are several <a href="https://gorails.com/episodes/creating-gems-for-frontend-javascript-libraries">quick</a> and <a href="http://www.sitepoint.com/create-ruby-gem-jquery-plugin-basics/">dirty</a> <a href="http://brandonhilkert.com/blog/how-to-build-a-rails-engine/">guides</a> out there on to how to do this!</p>
 
-<p>Since we had already built the feature into a project, it was really straightforward to pull it out into a gem. First, we abstracted the existing code as much as we could and took out any specific references to the app that it lived in. Generic code is reusable code, and what is a gem if not reusable code? Once we had done that, we just followed the guides linked to above on how to turn the code into a gem. Let me lift the main points from <a href="http://carlosbecker.com/posts/gemify-your-assets/">Carlos Becker’s excellent post</a> to demonstrate how straightforward the process is:</p>
+<p>Since we had already built the feature into a project, it was really straightforward to pull it out into a gem. First, we abstracted the existing code as much as we could and took out any specific references to the app that it lived in. Generic code is reusable code, and what is a gem if not reusable code? Once we had done that, we just followed the guides linked to above on how to turn the code into a gem. Let me lift the main points from <a href="http://carlosbecker.com/posts/gemify-your-assets">Carlos Becker’s excellent post</a> to demonstrate how straightforward the process is:</p>
 
 <ol>
 <li><p>Create the project skeleton
