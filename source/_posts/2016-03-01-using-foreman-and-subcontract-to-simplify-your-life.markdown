@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Foreman and Subcontract To Simplify Your Life"
+title: "Using Foreman and Subcontractor To Simplify Your Life"
 date: 2016-03-01 16:49
 comments: true
 categories: [Foreman, Subcontractor, Gems We Love]
