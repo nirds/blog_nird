@@ -58,7 +58,13 @@
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/2016/02/09/the-first-gem-is-the-sweetest/</loc>
-        <lastmod>2016-02-10T11:56:26-08:00</lastmod>
+        <lastmod>2016-02-10T12:30:19-08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://nird-blog.herokuapp.com//blog/2016/03/01/using-foreman-and-subcontract-to-simplify-your-life/
+        </loc>
+        <lastmod>2016-03-03T11:13:19-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//about/</loc>
@@ -66,19 +72,19 @@
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//archives/</loc>
-        <lastmod>2016-02-10T11:56:26-08:00</lastmod>
+        <lastmod>2016-03-03T11:13:19-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/archives/</loc>
-        <lastmod>2016-02-10T11:56:26-08:00</lastmod>
+        <lastmod>2016-03-03T11:13:19-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//blog/</loc>
-        <lastmod>2016-02-10T11:56:26-08:00</lastmod>
+        <lastmod>2016-03-03T11:13:19-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//</loc>
-        <lastmod>2016-02-10T11:56:26-08:00</lastmod>
+        <lastmod>2016-03-03T11:13:19-08:00</lastmod>
     </url>
     <url>
         <loc>http://nird-blog.herokuapp.com//robots.txt</loc>

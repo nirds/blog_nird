@@ -1,0 +1,246 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>Using Foreman and Subcontract To Simplify Your Life  | NIRD Blog</title>
+
+<meta name="author" content="NIRD, LLC"> 
+
+<meta name="description" content="When working on a complex application, you may need more than one application or service running at one time. This can be a pain to manage without &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="NIRD Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NIRD Blog</a></h1>
+<h4>Cool stuff that we do and like</h4>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="http://nird.us">NIRD Website</a></li>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main-navigation">
+  <li><a href="http://nird.us">NIRD Website</a></li>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:nird-blog.herokuapp.com/">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Using Foreman and Subcontract to Simplify Your Life</h2>
+	<div class="entry-content"><p>When working on a complex application, you may need more than one application or service running at one time. This can be a pain to manage without great tools like the <a href="https://github.com/ddollar/foreman">Foreman</a> and <a href="https://github.com/pitluga/subcontractor">Subcontractor</a> gems, because you would have to have all of those apps and services open in different tab in order for your one complex app to function properly.</p>
+
+<!-- more -->
+
+
+<p>Let’s use a simple example. Say we’re developing on a customer_app that requires three other apps: crude_app, silly_app, encouraging_app, and each of these applications sends and receives data from the customer_app.</p>
+
+<p>In this kind of situation, you might open up multiple tabs and start all of your applications or services &ndash; except one &ndash; and then spend up to 30 minutes asking “Why isn’t this working?” More often, though, you might start up all the right things, but be irritated by how tedious that is. Even if it’s only three applications, that time adds up.</p>
+
+<p>Fortunately, there is a solution. The Foreman and Subcontractor gems help manage this for you. Foreman allows you to manage multiple processes with a Procfile containing a list of all of the applications and/or services you’d like to start up at the same time. Subcontractor allows you to start that process from different directories and under the gem configuration specified by <a href="https://rvm.io/">RVM</a> or <a href="https://github.com/rbenv/rbenv">RBENV</a>. There are many ways to <a href="https://github.com/pitluga/subcontractor">configure your Procfile</a> so you can set-up your application just the way you want it; for this post I’ll focus on basic setup,  a couple of small problems, and what I did to get around them.</p>
+
+<p>Here is what you have to do to get started:</p>
+
+<ol>
+<li>Install Foreman and Subcontractor</li>
+<li>Write a Procfile that describes what services you apps you want to run</li>
+<li>Type “foreman start&#8221; in terminal</li>
+</ol>
+
+
+<p><strong>Installing Foreman and Subcontractor:</strong></p>
+
+<p>Foreman and Subcontractor are meant to be run outside the context ruby-gemset, if you use RVM, or any other version manager of your application. Let’s return to our example client_app, with the folder structure below. You want to make sure you’re installing the gems in the client folder not in the subfolders that contain application code.</p>
+
+<p><strong>Writing a Procfile:</strong></p>
+
+<p>Each entry in a Procfile (one entry per application or service) follows the basic format:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">App_name</span><span class="ss">:subcontract</span> <span class="n">package</span> <span class="n">manager</span><span class="p">,</span> <span class="n">gemset</span> <span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">termination</span> <span class="n">signal</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">port</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Our example client_app would have a Procfile that includes info for crude_app, funny_app, and customer_app:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">crude</span><span class="p">:</span> <span class="n">subcontract</span> <span class="o">--</span><span class="n">rvm</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="vi">@crude_app</span> <span class="o">--</span><span class="n">chdir</span> <span class="o">.</span><span class="n">/crude_app</span> <span class="o">--</span><span class="n">signal</span> <span class="no">INT</span> <span class="o">--</span> <span class="n">rails</span> <span class="n">s</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">3001</span>
+</span><span class='line'><span class="ss">funny</span><span class="p">:</span> <span class="n">subcontract</span> <span class="o">--</span><span class="n">rvm</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="vi">@funny_app</span> <span class="o">--</span><span class="n">chdir</span> <span class="o">.</span><span class="n">/funny_app</span> <span class="o">--</span><span class="n">signal</span> <span class="no">INT</span> <span class="o">--</span> <span class="n">rails</span> <span class="n">s</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">3001</span>
+</span><span class='line'><span class="ss">customer</span><span class="p">:</span> <span class="n">subcontract</span> <span class="o">--</span><span class="n">rvm</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="vi">@customer_app</span><span class="o">--</span><span class="n">chdir</span> <span class="o">.</span><span class="n">/customer_app</span> <span class="o">--</span><span class="n">signal</span> <span class="no">INT</span> <span class="o">--</span> <span class="n">rails</span> <span class="n">s</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">3001</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let’s go through the crude_app Procfile entry piece by piece.</p>
+
+<p><code>crude</code>                    &ndash; abbreviation for crude_app</p>
+
+<p><code>subcontract</code>              &ndash; flags the following info to be passed into subcontract</p>
+
+<p><code>--rvm</code>                    &ndash; RVM is the package manager</p>
+
+<p><code>ruby-2.2.3@crude_app</code>     &ndash; our gemset for this project</p>
+
+<p><code>--chdir</code>                  &ndash; flag signifying that you’re changing directories</p>
+
+<p><code>./crude_app</code>              &ndash; the directory you’re changing to</p>
+
+<p><code>--signal</code>                 &ndash; flag signifying that you’re designating termination signal</p>
+
+<p><code>INT</code>                      &ndash; the actual termination signal type</p>
+
+<p><code>-- rails s -p 300x</code>       &ndash; this is the command to start the process</p>
+
+<p><strong>Foreman Start:</strong>
+After you’ve written your Procfile, make sure you’re in the directory containing the Procfile, then type  “foreman start” in your terminal. Now you’re up and running.</p>
+
+<p>As great as Foreman and Subcontractor are, there are a couple of downsides. These downsides are small, but can cause some hitches. I’ll go through them now, and share with you the workarounds I use.</p>
+
+<p><strong> All of the rails development logs for each application are in the same window.</strong></p>
+
+<p>I use the logs as the main source of information when I’m working, and it would be easy to get logs from  crude_app, silly_app, and encouraging_app mixed up. To get around this I’ll open another tab and tail the log manually so i know what’s coming from what.</p>
+
+<p><strong> Pry breaks all of the things</strong></p>
+
+<p>If I’m using pry to debug one of our applications that uses Foreman, I’ll run into trouble. When I reach the point where pry will stop execution of my application, I can’t interact with it in the terminal.</p>
+
+<p>To deal with this, I navigate into the Procfile and comment out the line that starts the specific application I’m debugging, then I start that app manually in another tab.</p>
+
+<p>These are pretty minor problems, and they are the only problems I’ve found working with foreman and subcontractor. Overall, these issues are tiny compared with the time I save &ndash; given the choice, I’ll go with Foreman and Subcontractor every time.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i>&nbsp;<time datetime="2016-03-01T16:49:00-08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2016</time></div>
+	<div class="tags">
+
+<i class="icon-tags"></i>&nbsp;
+
+	<a class='category' href='/blog/categories/foreman/'>Foreman</a>, <a class='category' href='/blog/categories/gems-we-love/'>Gems We Love</a>, <a class='category' href='/blog/categories/subcontractor/'>Subcontractor</a>
+
+
+</div>
+	<div class="author">
+  
+
+<i class="icon-star-empty"></i>&nbsp;<span class="byline author vcard">Posted by <span class="fn">Adam Bell</span></span>
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016<a href="http://nird.us/">
+
+    NIRD, LLC
+</a>
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
