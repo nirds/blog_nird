@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technical, | NIRD Blog]]></title>
+  <title><![CDATA[Category: Technical | NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//blog/categories/technical/atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2016-03-24T17:11:56-07:00</updated>
+  <updated>2016-03-24T17:17:18-07:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -58,6 +58,157 @@
 <li><a href="http://edgeguides.rubyonrails.org/engines.html">Getting Started With Engines</a></li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Customizing Sublime Text]]></title>
+    <link href="http://nird-blog.herokuapp.com//blog/2013/09/05/customizing-sublime-text/"/>
+    <updated>2013-09-05T15:47:00-07:00</updated>
+    <id>http://nird-blog.herokuapp.com//blog/2013/09/05/customizing-sublime-text</id>
+    <content type="html"><![CDATA[<h3>What Sublime Text is:</h3>
+
+<hr />
+
+<p>Sublime Text is a cross platform text editor, excellent for code, markup, and prose. It&rsquo;s free to try and fun to customize. You can customize it in several ways: the color scheme, the UI aspects, key bindings, and a variety of preferences.
+ <!-- more --></p>
+
+<h3>How to get it:</h3>
+
+<hr />
+
+<ul>
+<li>Download from <a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a>.</li>
+<li><a href="http://docs.sublimetext.info/en/latest/getting_started/install.html">Installation instructions vary</a> according to your OS.</li>
+<li>You can try out the full version for as long as you&rsquo;d like before you buy, but it&rsquo;s &ldquo;nagware&rdquo;&ndash; will remind you often to purchase a license.</li>
+<li>Unlimited commercial licenses cost $70 currently. Purchase one <a href="https://www.sublimetext.com/buy">here</a>.</li>
+<li>When you enter a purchased license key (under Help &ndash;> Enter Key), no more nagging!</li>
+</ul>
+
+
+<h3>Cool customization:</h3>
+
+<hr />
+
+<p>Get <a href="https://sublime.wbond.net/">Package Control</a> to manage plugins. It makes adding new themes, color schemes, and more super easy.</p>
+
+<ol>
+<li> Install Package Control via the <a href="https://sublime.wbond.net/installation">instructions</a>.</li>
+<li> In Sublime, press Cmd+Shift+P and type &ldquo;install package&rdquo;. Hit enter or click on the suggested choice, &ldquo;Package Control: Install Package&rdquo;.</li>
+<li> Oh wow, that&rsquo;s all the packages available, sorted and searchable by name. That&rsquo;s not actually super helpful if you don&rsquo;t know what you&rsquo;re looking for. I&rsquo;d start by <a href="https://sublime.wbond.net/browse">browsing</a> some popular packages, or <a href="https://sublime.wbond.net/search">searching</a> for something specific, on the Package Control website. There you can see full descriptions, links to Github repos, and more.</li>
+<li> Once you find what you want, do Cmd+Shift+P and &ldquo;install package&rdquo; again, then search for the one you want.</li>
+<li> When you select a package, it&rsquo;ll download and install for you- easy!</li>
+</ol>
+
+
+<h4>Appearance</h4>
+
+<p>Color schemes effect the text area: font colors and syntax highlighting. Sublime comes loaded with a few schemes, you can make your own, you can download and install them manually, or you can use Package Control to find and install them.</p>
+
+<ol>
+<li> View available schemes and change your active one: SublimeText2 &ndash;> Preferences &ndash;> Color Schemes</li>
+<li> Creating your own scheme is complicated and outside the scope of this post.</li>
+<li> Download and install a scheme manually:
+
+<ul>
+<li>Find a cool scheme <a href="http://colorsublime.com/">here</a> or elsewhere.</li>
+<li>Download one you like. You should get a .tmTheme file.</li>
+<li>Open SublimeText2 &ndash;> Preferences &ndash;> Browse Packages&hellip;</li>
+<li>Paste your downloaded .tmTheme file into the &ldquo;Color Scheme &ndash; Default&rdquo; folder.</li>
+<li>The new scheme will now appear in SublimeText2 &ndash;> Preferences &ndash;> Color Schemes &ndash;> Color Scheme- Default menu.</li>
+</ul>
+</li>
+<li> Use Package Control to install a scheme:
+
+<ul>
+<li><a href="https://sublime.wbond.net/search/color%20scheme">Search for color schemes</a> on the Package Control site.</li>
+<li>View the available ones, checkout screenshots, and pick some favorites.</li>
+<li>Follow the Package Control instructions above to find and install the ones you like into your Sublime Text.</li>
+<li>See available schemes and change the active one in the SublimeText2 &ndash;> Preferences &ndash;> Color Schemes menu.</li>
+</ul>
+</li>
+</ol>
+
+
+<p>Themes generally effect the user interface of Sublime, in addition to the appearance, though it&rsquo;s not a hard and fast definition. They may change menu configurations, what information is desplayed around the text area, or add features. The <a href="https://github.com/buymeasoda/soda-theme/">Soda Theme</a> (both light and dark versions) are very popular choices. You can install themes in much the same ways as color schemes.</p>
+
+<ol>
+<li> View your active theme:
+
+<ul>
+<li>Open SublimeText2 &ndash;> Preferences &ndash;> Default</li>
+<li>Find the line that says &ldquo;theme&rdquo;: &ldquo;SuperBasicTheme.sublime-theme&rdquo;</li>
+<li>Whatever SuperBasicTheme actually says is the theme that is in effect currently.</li>
+</ul>
+</li>
+<li> Creating your own theme is complicated and outside the scope of this post.</li>
+<li> Download and install a theme manually:
+
+<ul>
+<li>Find a cool theme on <a href="https://github.com/search?q=sublime+theme&amp;nwo=buymeasoda%2Fsoda-theme&amp;search_target=global&amp;ref=cmdform">Github</a> or elsewhere.</li>
+<li>Download one you like. You should get a directory (unzip if it comes as a zipped file).</li>
+<li>Open SublimeText2 &ndash;> Preferences &ndash;> Browse Packages&hellip;</li>
+<li>Paste your downloaded directory into the &ldquo;Packages&rdquo; folder.</li>
+<li>To activate new theme, you&rsquo;ll need to add/edit a line in your SublimeText2 &ndash;> Preferences &ndash;> User file. It will be &ldquo;theme&rdquo;: &ldquo;CoolNewTheme.sublime-theme&rdquo; where CoolNewTheme is replaced with the actual name of your cool new theme. There should be activation instructions from wherever you download from that will give you the correct name.</li>
+</ul>
+</li>
+<li> Use Package Control to install a scheme:
+
+<ul>
+<li><a href="https://sublime.wbond.net/search/theme">Search for themes</a> on the Package Control site.</li>
+<li>View the available ones, check out screenshots, and pick a keeper.</li>
+<li>Follow the Package Control instructions at the beginning of this section to find and install the ones you like into your Sublime Text.</li>
+<li>To activate new theme, you&rsquo;ll need to add/edit a line in your SublimeText2 &ndash;> Preferences &ndash;> User file. It will be &ldquo;theme&rdquo;: &ldquo;CoolNewTheme.sublime-theme&rdquo; where CoolNewTheme is replaced with the actual name of your cool new theme. There should be activation instructions from wherever you download from that will give you the correct name.</li>
+</ul>
+</li>
+</ol>
+
+
+<h4>Settings</h4>
+
+<p>There are two Settings files: Default (global) and User. Settings in the User file will override the Defaults if they conflict. Normally, people edit the User one and leave the Default as is, as a reference for things that can be changed. Your color scheme and theme will be listed in the Settings files, but there are other ways to change them than through these files (see below).</p>
+
+<p>Open SublimeText2 &ndash;> Preferences &ndash;> [Defaut or User]</p>
+
+<p>Some popular preferences to add or change are:</p>
+
+<ul>
+<li>&ldquo;save_on_focus_lost&rdquo;: true
+
+<ul>
+<li>Automatically saves the file you&rsquo;re editing when you leave it.</li>
+</ul>
+</li>
+<li>&ldquo;wordWrap&rdquo;: true
+
+<ul>
+<li>Word wrap set to always be on.</li>
+</ul>
+</li>
+<li>&ldquo;highlight_line&rdquo;: true
+
+<ul>
+<li>Highlights the line your cursor is in</li>
+</ul>
+</li>
+<li>&ldquo;line_padding_bottom&rdquo;: 1
+
+<ul>
+<li>Gives each line a bit of padding underneath it, making for easier to read text</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Key Bindings</h4>
+
+<p>There are also two Key Binding files: Defaut (global) and User. Again, the User file will override the Default, so it&rsquo;s recommended that you leave the Default as a reference and only edit the User. As you add new values to the User file, you&rsquo;ll see the keyboard hints in the dropdown menu reflect your changes. Cool!</p>
+
+<h3>Resources:</h3>
+
+<p><a href="http://docs.sublimetext.info/en/latest/">Unofficial Sublime Documentation</a><br>
+<a href="http://thecrumb.com/wiki/sublime">Great list of resources</a><br>
+<a href="http://www.sublimetext.com/docs/2/settings.html">Info about settings</a></p>
 ]]></content>
   </entry>
   

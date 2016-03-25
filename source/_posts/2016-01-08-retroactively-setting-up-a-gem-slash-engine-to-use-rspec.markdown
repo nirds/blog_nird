@@ -3,7 +3,7 @@ layout: post
 title: "Retroactively Setting up a Gem/Engine to Use Rspec"
 date: 2016-03-24 12:51
 comments: true
-categories: Technical, Gems
+categories: [Technical, Gems]
 author: Cheri Allen
 ---
 
