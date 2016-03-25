@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technical, | NIRD Blog]]></title>
-  <link href="http://nird-blog.herokuapp.com//blog/categories/technical/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Gems | NIRD Blog]]></title>
+  <link href="http://nird-blog.herokuapp.com//blog/categories/gems/atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
   <updated>2016-03-24T17:04:29-07:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
