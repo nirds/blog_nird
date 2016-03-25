@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical, | NIRD Blog]]></title>
   <link href="http://nird-blog.herokuapp.com//blog/categories/technical/atom.xml" rel="self"/>
   <link href="http://nird-blog.herokuapp.com//"/>
-  <updated>2016-03-24T17:04:29-07:00</updated>
+  <updated>2016-03-24T17:11:56-07:00</updated>
   <id>http://nird-blog.herokuapp.com//</id>
   <author>
     <name><![CDATA[NIRD, LLC]]></name>
@@ -18,14 +18,14 @@
     <link href="http://nird-blog.herokuapp.com//blog/2016/03/24/retroactively-setting-up-a-gem-slash-engine-to-use-rspec/"/>
     <updated>2016-03-24T12:51:00-07:00</updated>
     <id>http://nird-blog.herokuapp.com//blog/2016/03/24/retroactively-setting-up-a-gem-slash-engine-to-use-rspec</id>
-    <content type="html"><![CDATA[<p>Some of us NIRDs built a gem recently, <a href="https://github.com/nirds/ng_will_paginate">ng_will_paginate</a>, to allow easy use of the fabulous will-paginate gem with an Angular-fronted Rails application. This was the first time we built a gem that uses assets, and it was an excellent learning opportunity. As mentioned in <a href="link">Patrick’s post</a>, we traveled a winding path while building this gem. Namely, we extracted the code for it from another project, which meant that we were pulling in fully formed code, and not practicing TDD (please don’t judge us). As a result, we built the gem without the proper testing options and we needed to add them retroactively. This was a complicated thing to research and figure out, but implementation ended up not being too difficult.</p>
+    <content type="html"><![CDATA[<p>Some of us NIRDs built a gem recently, <a href="https://github.com/nirds/ng_will_paginate">ng_will_paginate</a>, to allow easy use of the fabulous will-paginate gem with an Angular-fronted Rails application. This was the first time we built a gem that uses assets, and it was an excellent learning opportunity. As mentioned in <a href="http://blog.nird.us/blog/2016/02/09/the-first-gem-is-the-sweetest/">Patrick’s post</a>, we traveled a winding path while building this gem. Namely, we extracted the code for it from another project, which meant that we were pulling in fully formed code, and not practicing TDD (please don’t judge us). As a result, we built the gem without the proper testing options and we needed to add them retroactively. This was a complicated thing to research and figure out, but implementation ended up not being too difficult.</p>
 
 <!-- more -->
 
 
 <p>In this post, I&rsquo;ll walk you through how to implement this yourself:</p>
 
-<p>Since our gem pulls in assets for the client app, it’s considered an engine (you can see this mentioned in many(link) of(link) the(link) guides(link) linked to in Patrick’s post(link)). To test it properly, we&rsquo;ll write code in the dummy app that uses our gem’s functionality, then write javascript specs in the dummy app to test that this functionality is working. In contrast, if we were just writing Ruby code, we’d be able to test with Rspec within the gem’s spec/ directory.</p>
+<p>Since our gem pulls in assets for the client app, it’s considered an engine (you can see this mentioned in many of the guides linked to in Patrick’s post). To test it properly, we&rsquo;ll write code in the dummy app that uses our gem’s functionality, then write javascript specs in the dummy app to test that this functionality is working. In contrast, if we were just writing Ruby code, we’d be able to test with Rspec within the gem’s spec/ directory.</p>
 
 <p>First, we’ll get the dummy app by generating a new plugin project with the same name as our gem, with options to include a dummy app. Then, we can move it into our real project.</p>
 
